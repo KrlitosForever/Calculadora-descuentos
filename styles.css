@@ -2,38 +2,88 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
+    padding: 15px; /* Padding general para móviles */
+    box-sizing: border-box;
 }
 
 .container {
     max-width: 500px;
-    margin: 50px auto;
+    width: 100%; /* Hace que se ajuste al ancho disponible */
+    margin: 30px auto;
     background: #fff;
-    padding: 20px;
+    padding: 15px;
     border-radius: 8px;
+    box-sizing: border-box; /* Incluye padding en el ancho total */
 }
 
 h1 {
     text-align: center;
     color: #333;
+    font-size: 1.8rem; /* Unidad rem para mejor escalado */
+    margin: 0 0 20px 0;
 }
 
 label {
     display: block;
-    margin-top: 15px;
+    margin-top: 12px;
     color: #555;
+    font-size: 0.9rem;
 }
 
 input[type="number"] {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
+    padding: 12px;
+    margin-top: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 
 #resultado {
     text-align: center;
-    margin-top: 20px;
+    margin: 25px 0 10px 0;
     color: #333;
-    font-size: 1.2em;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+/* Media Queries para dispositivos más pequeños */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        margin: 20px auto;
+        padding: 12px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    label {
+        font-size: 0.85rem;
+    }
+    
+    input[type="number"] {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+    
+    #resultado {
+        font-size: 1rem;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        margin: 15px auto;
+    }
+    
+    h1 {
+        font-size: 1.3rem;
+    }
 }
